@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">GeoQuiz</string>
+    <string name="question_africa">The tallest mountain in Africa is Mount Kilimanjaro.</string>
+    <string name="question_machu">Machu Picchu is located in Chile.</string>
+    <string name="question_new_zealand">Auckland is the capital of New Zealand.</string>
+    <string name="question_petra">Petra is located in the country Jordan.</string>
+    <string name="question_hawaii">There are 8 major islands apart of Hawaii.</string>
+    <string name="question_yellowstone">Yellowstone National Park became the first national park in the U.S.</string>
+    <string name="question_LA">Los Angeles is West of Reno, Nevada.</string>
+    <string name="true_button">True</string>
+    <string name="false_button">False</string>
+    <string name="next_button">Next</string>
+    <string name="prev_button">Prev</string>
+    <string name="correct_toast">Correct!</string>
+    <string name="incorrect_toast">Incorrect!</string>
+</resources>
