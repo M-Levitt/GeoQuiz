@@ -8,15 +8,16 @@ private const val TAG = "QuizViewModel"
 class QuizViewModel : ViewModel() {
 
     var currentIndex = 0
+    var isCheater = false
 
     private val questionBank = listOf(
-        Question(R.string.question_africa, true),
-        Question(R.string.question_machu, false),
-        Question(R.string.question_new_zealand, false),
-        Question(R.string.question_petra, true),
-        Question(R.string.question_hawaii, true),
-        Question(R.string.question_yellowstone, true),
-        Question(R.string.question_LA, false)
+        Question(R.string.question_africa, true, false),
+        Question(R.string.question_machu, false, false),
+        Question(R.string.question_new_zealand, false, false),
+        Question(R.string.question_petra, true, false),
+        Question(R.string.question_hawaii, true, false),
+        Question(R.string.question_yellowstone, true, false),
+        Question(R.string.question_LA, false, false)
     )
 
     val currentQuestionAnswer: Boolean
@@ -24,6 +25,9 @@ class QuizViewModel : ViewModel() {
 
     val currentQuestionText: Int
         get() = questionBank[currentIndex].textResId
+
+    val currentQuestionRepeat: Boolean
+        get() = questionBank[currentIndex].repeat
 
     fun moveToNext() {
         currentIndex = (currentIndex + 1) % questionBank.size
@@ -34,5 +38,9 @@ class QuizViewModel : ViewModel() {
         if (currentIndex < 0) {
             currentIndex = questionBank.size - 1
         }
+    }
+
+    fun hasRepeated() {
+        questionBank[currentIndex].repeat = true
     }
 }
